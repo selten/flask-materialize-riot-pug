@@ -5,6 +5,7 @@
 4. `pip install pandas`
 5. `pip install joblib`
 6. `pip install Flask-HTTPAuth`
+7. `pip install jupyter`
 
 # Testing
 1. `npm test`
