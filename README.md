@@ -6,6 +6,9 @@
 5. `pip install joblib`
 6. `pip install Flask-HTTPAuth`
 
+# Testing
+1. `npm test`
+
 # Frameworks
 * http://riotjs.com/   
 * http://materializecss.com/   
