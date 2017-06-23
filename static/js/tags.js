@@ -1,11 +1,16 @@
 
-riot.tag2('test', '<div>test</div>', '', '', function(opts) {
+riot.tag2('test', '<div class="col s12 m6"> <div class="row"> <div class="col s4 center" each="{num in data}"><span>{num}</span></div> </div> </div>', '', '', function(opts) {
 var self;
 
 self = this;
 
-self.update();
+this.on('mount', function() {
+  self.data = ['1', '2', '3'];
+  return self.update({
+    data: self.data
+  });
+});
 });
 
-riot.tag2('top-menu-tag', '<nav class="z-depth-0"> <div class="nav-wrapper container"><a class="brand-logo" href="#">Logo</a></div> <ul class="right hide-on-med-and-down" id="nav-mobile"> <li><a href="sass.html">Sass</a></li> <li><a href="badges.html">Components</a></li> <li><a href="collapsible.html">JavaScript</a></li> </ul> </nav>', '', '', function(opts) {
+riot.tag2('top-menu-tag', '<nav class="z-depth-0"> <div class="nav-wrapper container"><a class="brand-logo" href="#">Logo</a> <ul class="right hide-on-med-and-down" id="nav-mobile"> <li><a href="#">Link 1</a></li> <li><a href="#">Link 2</a></li> <li><a href="#">Link 3</a></li> </ul> </div> </nav>', '', '', function(opts) {
 });
